@@ -1,42 +1,39 @@
-import logo from './logo.svg';
+import logo from './icons8-popcorn-100.png';
 import './App.css';
-import movies from './movies.csv';
+import './Autocomplete.js';
 import React from 'react';
-import Papa from 'papaparse';
+import ComboBox from './Autocomplete.js';
 
 function App() {
 
-  const [movies, setMovies] = React.useState([]);
+  const [movies, setMovies] = React.useState([{}])
 
-  const papaConfig = {
-    complete : (results, file) => {
-      console.log("Done", results, file);
-    },
-    download : true,
-    error : (error, file) => {
-      console.log("error")
-    },
-  };
-
-  Papa.parse(movies, papaConfig);
+  React.useEffect(() => {
+    fetch("/", {method:'GET'}).then(
+      res => {
+        res.json()
+        console.log(res)
+      }
+    ).then(
+      data => {
+        setMovies(data)
+        console.log(data)
+      }
+    )
+  }, [])
 
   return (
+    
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Got a favorite movie?
+          <ComboBox/>
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
       </header>
     </div>
+    
   );
 }
 
