@@ -1,8 +1,9 @@
-import logo from './icons8-popcorn-100.png';
 import './App.css';
 import './Autocomplete.js';
 import React from 'react';
 import ComboBox from './Autocomplete.js';
+import {ParallaxProvider, Parallax} from 'react-scroll-parallax';
+import headerPic from './download1.png';
 
 function App() {
 
@@ -22,18 +23,19 @@ function App() {
     )
   }, [])
 
-  return (
-    
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Got a favorite movie?
-          <ComboBox/>
-        </p>
+  return (    
+
+    <div>
+      <header>
+        <img src={headerPic} alt="computer pixel"/>
+        <p>ah.</p>
       </header>
-    </div>
     
+      <section>
+
+      </section>
+    </div>
+
   );
 }
 
