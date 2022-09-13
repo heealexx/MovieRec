@@ -4,14 +4,24 @@
   
 }
 
+@font-face {
+  font-family: chineseFont;
+  src: url(ZCOOLQingKeHuangYou-Regular.ttf);
+}
+
+.red {
+  color: #d31010;
+  font-size: 3.5rem;
+}
+
 body {
   background-color: var(--bg-color);
 }
 
 header {
-  margin-top: 40px;
   text-align: center;
   color: #FFFFFF;
+  font-family: chineseFont;
   font-size: 2.5rem;
   height: 100vh;
 }

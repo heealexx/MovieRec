@@ -1,8 +1,8 @@
 import './App.css';
-import './Autocomplete.js';
+//import './Autocomplete.js';
 import React from 'react';
-import ComboBox from './Autocomplete.js';
-import {ParallaxProvider, Parallax} from 'react-scroll-parallax';
+//import ComboBox from './Autocomplete.js';
+//import {ParallaxProvider, Parallax} from 'react-scroll-parallax';
 
 import headerPic from './download1.png';
 import songPic from './gemini-rights.webp';
@@ -29,7 +29,7 @@ function App() {
 
     <div>
       <header>
-        <img src={headerPic} alt="computer pixel"/>
+        <p className='red'>你好.欢迎.</p>
         <p>a.h</p>
       </header>
     
